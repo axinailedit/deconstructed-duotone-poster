@@ -4,7 +4,21 @@
 
 This is an image-styling skill for ChatGPT and Codex. It finds the main subjects in an image, breaks them into simple flat shapes, and turns them into a soft duotone editorial print with paper texture and film grain.
 
-![City crossing example](examples/city-crossing.png)
+## Examples
+
+These examples include photo comparisons and finished posters. The images are compressed so the README loads quickly.
+
+<p align="center">
+  <img src="examples/food-before-after.webp" alt="Food photo and six-square poster comparison" width="31%">
+  <img src="examples/ducks-before-after.webp" alt="Two ducks photo and six-square poster comparison" width="31%">
+  <img src="examples/lighthouse-before-after.webp" alt="Lighthouse photo and six-square poster comparison" width="31%">
+</p>
+
+<p align="center">
+  <img src="examples/purple-canopy.webp" alt="Purple canopy nine-square poster" width="31%">
+  <img src="examples/tables-after-dusk.webp" alt="Brick-red tables after dusk nine-square poster" width="31%">
+  <img src="examples/bright-bursts.webp" alt="Orange bright bursts nine-square poster" width="31%">
+</p>
 
 ## What it can do
 
@@ -122,4 +136,3 @@ The normal style uses pale ivory plus one ink color. If you clearly ask for mult
 ## License
 
 Released under the [MIT License](LICENSE).
-

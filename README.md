@@ -4,7 +4,21 @@
 
 这是一个用于 ChatGPT / Codex 的图片风格化 Skill。它会先识别图片里的主体，再把主体拆成一组平面图形，做成双色、柔光、纸纹和胶片颗粒感的编辑海报。
 
-![城市街景示例](examples/city-crossing.png)
+## 效果示例
+
+下面包含照片对比和成品海报。图片已经压缩，打开 README 时加载更快。
+
+<p align="center">
+  <img src="examples/food-before-after.webp" alt="食物照片与六宫格海报对比" width="31%">
+  <img src="examples/ducks-before-after.webp" alt="水面双鸭照片与六宫格海报对比" width="31%">
+  <img src="examples/lighthouse-before-after.webp" alt="灯塔照片与六宫格海报对比" width="31%">
+</p>
+
+<p align="center">
+  <img src="examples/purple-canopy.webp" alt="紫色树冠九宫格海报" width="31%">
+  <img src="examples/tables-after-dusk.webp" alt="砖红色夜晚餐桌九宫格海报" width="31%">
+  <img src="examples/bright-bursts.webp" alt="橙色烟花九宫格海报" width="31%">
+</p>
 
 ## 它能做什么
 
@@ -122,4 +136,3 @@ Skill 默认使用米白色加一种主题色。如果你明确要求多色，�
 ## 许可
 
 使用 [MIT License](LICENSE)。
-
