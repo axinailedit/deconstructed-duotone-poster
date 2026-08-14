@@ -1,10 +1,10 @@
 # Interpretation matrix
 
-Plan nine cells in reading order. Write each as `(anchor) + (flat role) + (one retained cue or material behavior) + (soft-edge treatment) + (density)`. Keep the plan short enough that it describes a graphic field rather than an illustrated object.
+Plan the selected cells in reading order: nine for portrait `3:4`, six for landscape `4:3`. Write each as `(anchor) + (flat role) + (one retained cue or material behavior) + (soft-edge treatment) + (density)`. Keep the plan short enough that it describes a graphic field rather than an illustrated object.
 
 ## Balanced role bank
 
-Select nine materially different roles appropriate to the mode:
+Select one materially different role per planned cell:
 
 1. Core reduction: keep one broad contour and one sparse signature cue.
 2. Dominant curve: interpret direction, route, posture, or edge as one main curve with a small broken rhythm.
@@ -21,7 +21,7 @@ Select nine materially different roles appropriate to the mode:
 
 ## Source Transform
 
-Choose three to five source anchors and recombine them across nine roles. Include four to six abstract, material, motion, erosion, or negative-space roles; two to four semi-literal cue studies; one cropped signature; and no more than one simplified scene fragment. Preserve only two to four signature details across the full grid. Avoid a complete hardware assembly or whole photographed scene in any cell.
+Choose three to five source anchors and recombine them across the selected cell count. For portrait, include four to six abstract/material-led roles and two to four semi-literal cue studies. For landscape, follow the six-cell balance below. Include one cropped signature and no more than one simplified scene fragment. Avoid a complete hardware assembly or whole photographed scene in any cell.
 
 ## Theme Compose
 
@@ -31,9 +31,15 @@ Derive two to five concrete theme anchors and one relation or mood. Give the maj
 
 Keep five to seven cells source-led. Use two to four cells for the added subject: one isolated reduction or cropped cue, one reduced relationship with a source anchor, and optionally one motion, material, negative-space, or scale study. Never repeat the whole added subject unchanged or render it in full detail.
 
+## Six-cell landscape balance
+
+For a landscape `4:3` six-grid, choose six materially different roles from the same bank. Use three to four abstract, material, motion, erosion, or negative-space studies; two to three semi-literal cue studies; at least one cropped signature; and no more than one simplified scene fragment. Preserve only two or three signature cues across the full six-cell family.
+
+In Source + Added Subject mode, keep three to five cells source-led and use one to three cells for the addition. Include at least one reduced relationship with a source anchor when two or more addition cells are used. Never let the addition occupy more than half of the grid.
+
 ## Balance gate
 
-A cell is too simple when it becomes a generic curve, dot pattern, rectangle, sunburst, or logo and the full nine-cell family no longer recovers the theme. Restore one grounded material behavior, crop, or contextual rhythm; do not automatically restore a complete object.
+A cell is too simple when it becomes a generic curve, dot pattern, rectangle, sunburst, or logo and the full cell family no longer recovers the theme. Restore one grounded material behavior, crop, or contextual rhythm; do not automatically restore a complete object.
 
 A cell is too literal when it renders a complete identifiable assembly, reconstructs a whole photographed scene, uses layered foreground/midground/background staging, repeats architectural openings precisely, or requires tiny linework. Replace components with a broad field, void, crop, or broken rhythm.
 

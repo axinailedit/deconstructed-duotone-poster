@@ -1,6 +1,6 @@
 # Visual system
 
-## Fixed layout
+## Portrait 3:4 nine-square layout
 
 - Canvas: portrait `3:4` by default. Obey another ratio only when the user explicitly requests it.
 - Use a fixed normalized design canvas of exactly `1200 x 1600` units for the default portrait `3:4` output. Scale all coordinates proportionally to the final raster; do not recompute them from generated content.
@@ -15,11 +15,24 @@
 - Footer left: reserve roughly 58–68% of footer width for exactly two short, small, left-aligned English lines.
 - Footer right: reserve roughly 14–26% for one to five subject-derived ultra-minimal icons. Leave clear blank space between copy and icons and around the footer.
 
+## Landscape 4:3 six-square layout
+
+- Use a fixed normalized canvas of exactly `1600 x 1200` units. Use this branch for an explicit landscape `4:3` or six-grid request, or for a source image whose width is at least `1.15` times its height when no ratio is stated.
+- Establish one paper-margin unit `M=128`. Place the outer six-cell grid at `x=128..1472`, `y=128..1016`. Top, left, and right paper margins are visibly identical at exactly `128` units. Do not center the grid vertically.
+- Use gutters of exactly `24` units. Make every cell exactly `432 x 432` units at columns `x=128..560`, `584..1016`, `1040..1472`; rows `y=128..560`, `584..1016`.
+- Think in one locked `1344 x 888` outer scaffold populated by a repeated 3-by-2 array made from one shared `432 x 432` square tile frame copied six times. The outer scaffold is rectangular because it contains three square columns and two square rows; each tile itself remains a mathematically exact square.
+- Treat these bounds as immutable. Never fit the cells by available height, enlarge one row, stretch edge cells, or improvise six independent panels. Scale both axes with one identical factor; after rounding, every cell width must equal its height within one output pixel.
+- Keep equal ivory gutters visibly open. Permit only a faint irregular pigment fringe `2–5` units inward from each locked square boundary. It may not enter a gutter, move a corner, or alter the measured square envelope.
+- Use `assets/layout-guide-4x3.png` as geometry-only reference. Never use its neutral gray, placeholder footer bars, circles, or clean digital edges as finished content.
+- Footer: use the remaining pale ivory band below `y=1016`. Keep copy and icons within approximately `y=1060..1130`, leaving clear ivory separation above and below. Keep the footer subordinate but readable.
+- Footer left: place exactly two very small left-aligned English lines near `x=128`; reserve roughly 58–68% of the usable width.
+- Footer right: place the subject-derived ultra-minimal icons within the rightmost 14–26% of usable width. Keep one quiet row where possible and preserve clear space around it.
+
 ## Medium-flat abstraction
 
-- Let the nine-cell family carry recognition collectively. A single abstract cell may be ambiguous when the neighboring cells restore the theme.
+- Let the full six- or nine-cell family carry recognition collectively. A single abstract cell may be ambiguous when the neighboring cells restore the theme.
 - Treat each cell as one broad filled mass, negative-space gesture, crop, material field, or mark rhythm plus at most one to three supporting mark families. Aim for roughly three to nine large forms; count a dot, dash, ripple, post, or fragment rhythm as one family.
-- Across nine cells, include four to six abstract, material, motion, or negative-space studies; two to four semi-literal cue studies; and no more than one simplified scene fragment. A structural cue must be cropped or reduced, not a detailed object rendering.
+- In portrait, include four to six abstract, material, motion, or negative-space studies and two to four semi-literal cue studies. In landscape, include three to four abstract/material-led studies and two to three semi-literal cue studies. In either layout, include no more than one simplified scene fragment; crop or reduce structural cues rather than rendering detailed objects.
 - Preserve only two to four signature details across the entire grid: for example, a road bend, lane-dash rhythm, lamp disk, railing cadence, wheel arc, profile edge, foam cuts, or leaf cluster. Do not place several signature parts in every cell.
 - Translate structures rather than illustrate them: railing -> a few unequal blocks and voids; brick paving -> two or three broken plane cuts; camera crossbar -> one bar, joint, and hanging drop; road -> one broad curve and sparse dash rhythm; cloud -> one torn field; sea -> broken reflection bands.
 - Prefer irregular fields, pooled shapes, broad arcs, radial cuts, torn edges, floating islands, dotted trails, broken stripes, negative-space channels, and quiet density shifts. Avoid coherent line-art, precise architectural openings, detailed hardware, and literal perspective scenes.
@@ -41,7 +54,7 @@
 - Keep the footer pale ivory cream. Set the English copy and subject icons in the chosen ink.
 - Render footer copy as exactly two left-aligned lines in a vintage typewriter-style monospaced serif. Make it approximately 20% smaller than the prior default: target a capital height around 1.2–1.5% of canvas height, with line spacing around 1.35–1.55 times the capital height. Use uneven ink pressure, slight character wear, and imperfect baseline registration while staying readable. Do not add headings, labels, numbers, logos, or other text.
 - Count primary subjects with `references/request-modes.md`. Use exactly one icon for a single subject. For multiple subjects, use one icon per subject with a minimum of two and maximum of five.
-- Build each icon as one main solid silhouette, at most one cream negative-space cut, and at most one supporting ink mark. Preserve one distinctive cue such as a wheel, handle, beak, leaf, roofline, profile, faucet bend, burner ring, or camera drop. Keep icons flatter and simpler than the nine-cell studies.
+- Build each icon as one main solid silhouette, at most one cream negative-space cut, and at most one supporting ink mark. Preserve one distinctive cue such as a wheel, handle, beak, leaf, roofline, profile, faucet bend, burner ring, or camera drop. Keep icons flatter and simpler than the grid studies.
 - Arrange icons in one quiet left-to-right row or a compact two-row group only when three to five icons need it. Keep icon boxes equal in size, aligned to a shared baseline or grid, and separated consistently. Do not add filler marks, repeat icons, or turn the icon group into a miniature scene.
 
 ## Paper and strong optical finishing
@@ -56,4 +69,4 @@ Reject smooth digital surfaces, uniform noise, canvas weave, cloth fibers, deep 
 
 ## Anti-style
 
-Reject photography, literal source collage, traced reconstruction, deep perspective, architectural drafting, photorealistic volume, watercolor, oil paint, airbrush shading, glossy gradients, 3D bevels, drop shadows, comic outlines, UI cards, dense poster typography, ornamental frames, cheap sharp-vector iconography, and nine interchangeable symbols.
+Reject photography, literal source collage, traced reconstruction, deep perspective, architectural drafting, photorealistic volume, watercolor, oil paint, airbrush shading, glossy gradients, 3D bevels, drop shadows, comic outlines, UI cards, dense poster typography, ornamental frames, cheap sharp-vector iconography, and interchangeable generic symbols.
