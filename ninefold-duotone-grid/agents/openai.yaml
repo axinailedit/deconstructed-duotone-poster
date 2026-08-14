@@ -1,0 +1,16 @@
+interface:
+  display_name: Ninefold Duotone Grid
+  short_description: 将图片重构为等距留白、严格方格的双色柔光纸纹海报
+  default_prompt: Use $ninefold-duotone-grid to create a spacious portrait 3:4 duotone
+    print with equal top and side margins, one shared exact-square tile repeated nine
+    times, pale ivory paper, inward hand-printed edges, separate strong glow, and
+    subject-derived footer icons.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

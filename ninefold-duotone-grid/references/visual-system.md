@@ -1,0 +1,59 @@
+# Visual system
+
+## Fixed layout
+
+- Canvas: portrait `3:4` by default. Obey another ratio only when the user explicitly requests it.
+- Use a fixed normalized design canvas of exactly `1200 x 1600` units for the default portrait `3:4` output. Scale all coordinates proportionally to the final raster; do not recompute them from generated content.
+- Establish one paper-margin unit `M=96`. Place the outer grid at `x=M..1200-M`, `y=M..M+1008`, therefore `x=96..1104`, `y=96..1104`. Its width and height are both exactly `1008` units. Top, left, and right paper margins are visibly identical at exactly `96` units. Do not center the grid vertically.
+- In relative terms, make each top/left/right margin `8%` of canvas width. Make the square grid `84%` of canvas width and `63%` of canvas height. Use these proportions as a visual cross-check, not as an alternative layout.
+- Use gutters of exactly `24` units. Make every cell exactly `320 x 320` units at these bounds: columns `x=96..416`, `440..760`, `784..1104`; rows `y=96..416`, `440..760`, `784..1104`.
+- Think in nested squares before adding content: first one `1008 x 1008` outer square; then a repeated 3-by-3 array made from one shared `320 x 320` square tile frame copied nine times. Do not describe or generate nine independent rectangles. The same tile edge length controls every row and column.
+- Treat these bounds as immutable layout geometry. Generate or clip pictorial content inside them. Never resize a cell independently, fit the grid by height, distribute leftover space, stretch edge cells, round one axis differently, or let glow redefine the measured frame.
+- When scaling to output pixels, use the same scale factor on both axes. After rounding, outer-grid width must equal height and every cell width must equal height within one output pixel. Any larger difference is a hard failure, not an acceptable optical adjustment.
+- Keep the exact square scaffold visually legible through equal ivory gutters. Preserve the desired hand-printed edge by allowing only a faint irregular pigment fringe inside each square boundary: `2–5` design units inward from the locked frame, with occasional pinhole gaps. The fringe may wobble locally but may not move a frame edge, invade a gutter, or change the measured square silhouette. Never draw a separate hard outline around the cells.
+- Footer: use the larger remaining pale ivory-cream area below the grid as quiet paper. Keep actual text and icons within a narrow 7–9% high band, with generous blank ivory above and below. The footer must feel subordinate, not like a second poster. The entire poster should read as a small square print block floating in a broad paper field.
+- Footer left: reserve roughly 58–68% of footer width for exactly two short, small, left-aligned English lines.
+- Footer right: reserve roughly 14–26% for one to five subject-derived ultra-minimal icons. Leave clear blank space between copy and icons and around the footer.
+
+## Medium-flat abstraction
+
+- Let the nine-cell family carry recognition collectively. A single abstract cell may be ambiguous when the neighboring cells restore the theme.
+- Treat each cell as one broad filled mass, negative-space gesture, crop, material field, or mark rhythm plus at most one to three supporting mark families. Aim for roughly three to nine large forms; count a dot, dash, ripple, post, or fragment rhythm as one family.
+- Across nine cells, include four to six abstract, material, motion, or negative-space studies; two to four semi-literal cue studies; and no more than one simplified scene fragment. A structural cue must be cropped or reduced, not a detailed object rendering.
+- Preserve only two to four signature details across the entire grid: for example, a road bend, lane-dash rhythm, lamp disk, railing cadence, wheel arc, profile edge, foam cuts, or leaf cluster. Do not place several signature parts in every cell.
+- Translate structures rather than illustrate them: railing -> a few unequal blocks and voids; brick paving -> two or three broken plane cuts; camera crossbar -> one bar, joint, and hanging drop; road -> one broad curve and sparse dash rhythm; cloud -> one torn field; sea -> broken reflection bands.
+- Prefer irregular fields, pooled shapes, broad arcs, radial cuts, torn edges, floating islands, dotted trails, broken stripes, negative-space channels, and quiet density shifts. Avoid coherent line-art, precise architectural openings, detailed hardware, and literal perspective scenes.
+- Permit crop, overlap, scale change, and one gentle directional tendency. Do not reconstruct full foreground/midground/background depth.
+
+## Soft-edge print language
+
+- Keep outer canvas, invisible square scaffold, square cells, and gutters geometrically exact. Keep pictorial shapes flat and stable inside cells. Separate structural geometry from surface character: the scaffold is exact; only the inward pigment fringe is hand-printed.
+- Build the core graphic from solid fills with rounded terminals, eased corners, mild hand-cut wobble, and slight asymmetry. The core silhouette must remain opaque, countable, and visually clean.
+- Limit absorbed ink spread to a narrow transition band of roughly `0.15–0.35%` of a cell edge. Use only faint paper-fiber breakup and rare pinhole show-through. Do not let absorption visibly enlarge, dissolve, or cloud the form.
+- Add strong luminous halation as a separate optical layer outside the stable core. Glow must not be simulated by increasing ink bleed or smearing paper texture.
+- Keep exact circles, rectangles, straight lines, and sharp Bézier corners rare inside pictorial cells unless a signature object requires them. Even then, soften them with ink gain and imperfect registration.
+- Reject razor-cut clipping masks, CAD-clean architecture, brittle polygons, hard black outlines, repeated stock icons, and perfectly identical repeated marks.
+
+## Color and footer typography
+
+- Use exactly two designed colors: fixed pale ivory cream `#F7F1E3` and one user-chosen solid ink color.
+- Fill every upper cell with the chosen ink; use pale ivory cream for shapes, negative cuts, margin, and gutters. Invert a cell only when it improves variation and still preserves the two-color system.
+- Keep the footer pale ivory cream. Set the English copy and subject icons in the chosen ink.
+- Render footer copy as exactly two left-aligned lines in a vintage typewriter-style monospaced serif. Make it approximately 20% smaller than the prior default: target a capital height around 1.2–1.5% of canvas height, with line spacing around 1.35–1.55 times the capital height. Use uneven ink pressure, slight character wear, and imperfect baseline registration while staying readable. Do not add headings, labels, numbers, logos, or other text.
+- Count primary subjects with `references/request-modes.md`. Use exactly one icon for a single subject. For multiple subjects, use one icon per subject with a minimum of two and maximum of five.
+- Build each icon as one main solid silhouette, at most one cream negative-space cut, and at most one supporting ink mark. Preserve one distinctive cue such as a wheel, handle, beak, leaf, roofline, profile, faucet bend, burner ring, or camera drop. Keep icons flatter and simpler than the nine-cell studies.
+- Arrange icons in one quiet left-to-right row or a compact two-row group only when three to five icons need it. Keep icon boxes equal in size, aligned to a shared baseline or grid, and separated consistently. Do not add filler marks, repeat icons, or turn the icon group into a miniature scene.
+
+## Paper and strong optical finishing
+
+1. Build one continuous uncoated pale ivory-cream `#F7F1E3` paper sheet across grid and footer: fine cellulose fibers, shallow tooth, and very subtle broad pulp variation. Keep the paper visually light, not yellow-brown or aged parchment.
+2. Keep chosen-color ink cores solid and flat. Add only mild absorption, rare pinhole-scale ivory show-through, and a very narrow feathered print edge.
+3. Add strong warm halation as a separate soft-light bloom at every cream/ink boundary. Let the bloom extend roughly `2–3.5%` of a cell edge while the underlying core stays flat, opaque, and sharply readable.
+4. Use only a low-to-medium global diffusion veil. The halo must be obvious at thumbnail scale, but the ink itself must not look wet, fuzzy, washed out, watercolor-like, or heavily absorbed.
+5. Add fine natural monochrome film grain above the paper, with sparse medium clumps. Keep it finer and more random than the paper fibers.
+
+Reject smooth digital surfaces, uniform noise, canvas weave, cloth fibers, deep watercolor pits, wet-ink clouds, fuzzy absorption, waxy Gaussian blur, opaque fog, fully blown halos, chromatic aberration, dark yellow paper, gray dirt, stains, scratches, or heavy damage.
+
+## Anti-style
+
+Reject photography, literal source collage, traced reconstruction, deep perspective, architectural drafting, photorealistic volume, watercolor, oil paint, airbrush shading, glossy gradients, 3D bevels, drop shadows, comic outlines, UI cards, dense poster typography, ornamental frames, cheap sharp-vector iconography, and nine interchangeable symbols.
