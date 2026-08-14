@@ -6,7 +6,6 @@
 
 ## 效果示例
 
-下面包含照片对比和成品海报。图片已经压缩，打开 README 时加载更快。
 
 <p align="center">
   <img src="examples/food-before-after.webp" alt="食物照片与六宫格海报对比" width="31%">
