@@ -1,4 +1,4 @@
-# Ninefold Duotone Grid
+# Deconstructed Duotone Poster
 
 [中文说明](README.md)
 
@@ -38,14 +38,14 @@ Both layouts keep generous empty space. The top, left, and right paper margins a
 
 ## Install
 
-Download or clone this repository, then install the complete `ninefold-duotone-grid` folder as a custom skill. Do not copy only `SKILL.md`; the layout guides and rule files are also required.
+Download or clone this repository, then install the complete `deconstructed-duotone-poster` folder as a custom skill. Do not copy only `SKILL.md`; the layout guides and rule files are also required.
 
 For a local Codex setup:
 
 ```bash
-git clone https://github.com/Lixorn/ninefold-duotone-grid.git
+git clone https://github.com/Lixorn/deconstructed-duotone-poster.git
 mkdir -p ~/.codex/skills
-cp -R ninefold-duotone-grid/ninefold-duotone-grid ~/.codex/skills/ninefold-duotone-grid
+cp -R deconstructed-duotone-poster/deconstructed-duotone-poster ~/.codex/skills/deconstructed-duotone-poster
 ```
 
 ## Use
@@ -53,31 +53,31 @@ cp -R ninefold-duotone-grid/ninefold-duotone-grid ~/.codex/skills/ninefold-duoto
 Provide an image and an ink color:
 
 ```text
-Use $ninefold-duotone-grid to stylize this photo in powder blue.
+Use $deconstructed-duotone-poster to stylize this photo in powder blue.
 ```
 
 Ask for the landscape layout:
 
 ```text
-Use $ninefold-duotone-grid to turn this wide photo into a landscape 4:3 six-square poster in forest green.
+Use $deconstructed-duotone-poster to turn this wide photo into a landscape 4:3 six-square poster in forest green.
 ```
 
 Create directly from a theme:
 
 ```text
-Use $ninefold-duotone-grid to create a brick-red poster about roads, beaches, and the sea.
+Use $deconstructed-duotone-poster to create a brick-red poster about roads, beaches, and the sea.
 ```
 
 Add a new subject to a source image:
 
 ```text
-Use $ninefold-duotone-grid with this coast photo and add a convertible car. Use cobalt blue ink.
+Use $deconstructed-duotone-poster with this coast photo and add a convertible car. Use cobalt blue ink.
 ```
 
 For a batch, assign one color to each image:
 
 ```text
-Use $ninefold-duotone-grid on these three photos in cyan, red, and violet.
+Use $deconstructed-duotone-poster on these three photos in cyan, red, and violet.
 ```
 
 ## Main modes
@@ -104,7 +104,7 @@ The normal style uses pale ivory plus one ink color. If you clearly ask for mult
 ├── README_EN.md
 ├── LICENSE
 ├── examples/
-└── ninefold-duotone-grid/
+└── deconstructed-duotone-poster/
     ├── SKILL.md
     ├── agents/
     ├── assets/
@@ -114,3 +114,4 @@ The normal style uses pale ivory plus one ink color. If you clearly ask for mult
 ## License
 
 Released under the [MIT License](LICENSE).
+

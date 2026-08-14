@@ -1,9 +1,9 @@
 ---
-name: ninefold-duotone-grid
-description: Transform a supplied image, a text-only theme, or a source image plus a requested added subject into a spacious editorial duotone print. Support a default portrait 3:4 nine-square layout and a compact landscape 4:3 six-square layout, each with fixed coordinates, equal top/left/right paper margins, one shared exact-square tile template, and zero visible rectangular drift while retaining a faint inward hand-printed fringe. Use highly reduced flat masses rather than drawing, hatching, or photographic detail, with pale ivory paper, one user-chosen ink, stable flat fills, strong separate halation, restrained ink bleed, and a quiet lower footer with two tiny English typewriter lines plus subject-derived ultra-minimal icons. Use for image transformations, theme-only prompts, added subjects, wide-image adaptations, prompt-only or analysis-only output, and batch variations in this visual family.
+name: deconstructed-duotone-poster
+description: Deconstruct a supplied image, a text-only theme, or a source image plus a requested added subject into a spacious editorial duotone print. Support a default portrait 3:4 nine-square layout and a compact landscape 4:3 six-square layout, each with fixed coordinates, equal top/left/right paper margins, one shared exact-square tile template, and zero visible rectangular drift while retaining a faint inward hand-printed fringe. Use highly reduced flat masses rather than drawing, hatching, or photographic detail, with pale ivory paper, one user-chosen ink, stable flat fills, strong separate halation, restrained ink bleed, and a quiet lower footer with two tiny English typewriter lines plus subject-derived ultra-minimal icons. Use for image transformations, theme-only prompts, added subjects, wide-image adaptations, prompt-only or analysis-only output, and batch variations in this deconstructed visual family.
 ---
 
-# Ninefold Duotone Grid
+# Deconstructed Duotone Poster
 
 Extract a small set of useful visual ideas and reinterpret them across one locked square-tile family: nine cells in portrait or six cells in landscape. Let the grid as a whole carry recognition: most cells may be abstract, while a few preserve restrained signature cues. Favor broad filled masses, negative-space cuts, mark rhythms, and material behavior over illustrated objects. Unless the user explicitly requests analysis or prompt-only output, generate and return a raster image.
 
@@ -78,8 +78,9 @@ For generation, return the raster first and one compact note with mode, layout, 
 
 ## Examples
 
-- “用 $ninefold-duotone-grid 把这张照片做成浅蓝色九格图。”
-- “用 $ninefold-duotone-grid 把这张横图做成 4:3 浅绿色六宫格。”
-- “用 $ninefold-duotone-grid 做一张关于公路、沙滩和大海的砖红色图，不提供照片。”
+- “用 $deconstructed-duotone-poster 把这张照片做成浅蓝色九格图。”
+- “用 $deconstructed-duotone-poster 把这张横图做成 4:3 浅绿色六宫格。”
+- “用 $deconstructed-duotone-poster 做一张关于公路、沙滩和大海的砖红色图，不提供照片。”
 - “用这张海岸照片，但额外加入一辆黄色敞篷车；主色仍用钴蓝。”
 - “只给我最终 Prompt，底部英文写 ROAD, SAND AND SEA。”
+

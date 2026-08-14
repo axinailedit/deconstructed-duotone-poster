@@ -1,4 +1,4 @@
-# Ninefold Duotone Grid
+# Deconstructed Duotone Poster
 
 [English README](README_EN.md)
 
@@ -38,14 +38,14 @@
 
 ## 安装
 
-下载或克隆这个仓库，把完整的 `ninefold-duotone-grid` 文件夹安装为自定义 Skill。不要只复制 `SKILL.md`，因为版式参考图和其他规则文件也需要一起保留。
+下载或克隆这个仓库，把完整的 `deconstructed-duotone-poster` 文件夹安装为自定义 Skill。不要只复制 `SKILL.md`，因为版式参考图和其他规则文件也需要一起保留。
 
 本地 Codex 可以使用：
 
 ```bash
-git clone https://github.com/Lixorn/ninefold-duotone-grid.git
+git clone https://github.com/Lixorn/deconstructed-duotone-poster.git
 mkdir -p ~/.codex/skills
-cp -R ninefold-duotone-grid/ninefold-duotone-grid ~/.codex/skills/ninefold-duotone-grid
+cp -R deconstructed-duotone-poster/deconstructed-duotone-poster ~/.codex/skills/deconstructed-duotone-poster
 ```
 
 ## 使用方法
@@ -53,31 +53,31 @@ cp -R ninefold-duotone-grid/ninefold-duotone-grid ~/.codex/skills/ninefold-duoto
 使用时只需要提供图片和主题色：
 
 ```text
-用 $ninefold-duotone-grid 风格化这张照片，主题色使用浅蓝色。
+用 $deconstructed-duotone-poster 风格化这张照片，主题色使用浅蓝色。
 ```
 
 指定横版六宫格：
 
 ```text
-用 $ninefold-duotone-grid 把这张横图做成 4:3 六宫格，主题色使用绿色。
+用 $deconstructed-duotone-poster 把这张横图做成 4:3 六宫格，主题色使用绿色。
 ```
 
 不提供图片，直接写主题：
 
 ```text
-用 $ninefold-duotone-grid 做一张关于公路、沙滩和大海的砖红色海报。
+用 $deconstructed-duotone-poster 做一张关于公路、沙滩和大海的砖红色海报。
 ```
 
 在原图中加入新主体：
 
 ```text
-用 $ninefold-duotone-grid 处理这张海岸照片，再加入一辆敞篷车，主题色使用钴蓝色。
+用 $deconstructed-duotone-poster 处理这张海岸照片，再加入一辆敞篷车，主题色使用钴蓝色。
 ```
 
 一次处理多张图片时，可以分别指定颜色：
 
 ```text
-用 $ninefold-duotone-grid 处理这三张照片，分别使用青色、红色和紫色。
+用 $deconstructed-duotone-poster 处理这三张照片，分别使用青色、红色和紫色。
 ```
 
 ## 三种主要模式
@@ -104,7 +104,7 @@ Skill 默认使用米白色加一种主题色。如果你明确要求多色，�
 ├── README_EN.md
 ├── LICENSE
 ├── examples/
-└── ninefold-duotone-grid/
+└── deconstructed-duotone-poster/
     ├── SKILL.md
     ├── agents/
     ├── assets/
@@ -114,3 +114,4 @@ Skill 默认使用米白色加一种主题色。如果你明确要求多色，�
 ## 许可
 
 使用 [MIT License](LICENSE)。
+
