@@ -6,7 +6,6 @@ This is an image-styling skill for ChatGPT and Codex. It finds the main subjects
 
 ## Examples
 
-These examples include photo comparisons and finished posters. The images are compressed so the README loads quickly.
 
 <p align="center">
   <img src="examples/food-before-after.webp" alt="Food photo and six-square poster comparison" width="31%">
