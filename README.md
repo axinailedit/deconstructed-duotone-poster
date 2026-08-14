@@ -1,26 +1,46 @@
 # Ninefold Duotone Grid
 
-A custom ChatGPT/Codex skill that turns a photograph, a text-only theme, or a source image plus an added subject into a spacious duotone editorial print with portrait and landscape layouts.
+[English README](README_EN.md)
 
-![City crossing example](examples/city-crossing.png)
+这是一个用于 ChatGPT / Codex 的图片风格化 Skill。它会先识别图片里的主体，再把主体拆成一组平面图形，做成双色、柔光、纸纹和胶片颗粒感的编辑海报。
 
-## What it does
+![城市街景示例](examples/city-crossing.png)
 
-- Reinterprets a source through nine portrait studies or six landscape studies.
-- Supports a portrait 3:4 canvas with a 3×3 square grid and a landscape 4:3 canvas with a 3×2 square grid.
-- Keeps the top, left, and right paper margins visually equal.
-- Uses one pale ivory paper color and one user-selected ink color.
-- Combines flat graphic cores, restrained printed edges, separate luminous halation, paper texture, and fine film grain.
-- Adds exactly two small English typewriter lines and one to five semantic subject icons in the footer.
-- Supports source-image transformation, text-only composition, and source plus added subject.
+## 它能做什么
 
-The included portrait and landscape structural guides are used only as image-generation references. They help the model preserve square cells and equal margins without programmatically cropping or compositing the finished artwork. The final print still receives organic inward dry-brush edges.
+- 把照片改造成 3:4 竖版九宫格海报。
+- 把横版照片改造成 4:3 横版六宫格海报。
+- 不提供照片时，也可以直接根据文字主题生成。
+- 可以在原图基础上再加入一个指定主体。
+- 米白纸底固定，另一种主题色由你指定。
+- 自动加入两行小字和与画面主体有关的极简图标。
 
-## Install
+每个格子不会重复画同一张照片。Skill 会挑选轮廓、动作、材质和局部特征，再用不同的平面图形重新表达。最终画面更像印刷海报，不像照片滤镜。
 
-Download or clone this repository, then install the complete `ninefold-duotone-grid` folder as a custom skill in a client that supports ChatGPT/Codex skills.
+## 两种版式
 
-For a local Codex setup:
+| 版式 | 画幅 | 内容 | 适合 |
+| --- | --- | --- | --- |
+| 九宫格 | 3:4 竖版 | 3×3 方格 | 竖图、方图、文字主题 |
+| 六宫格 | 4:3 横版 | 3×2 方格 | 横图、宽场景 |
+
+两种版式都保留较多留白。顶部与左右两侧的距离相同，每个格子都是标准正方形。横版六宫格会使用更小的图块和更大的四周留白。
+
+## 画面特点
+
+- 大块平面图形，不照搬原照片。
+- 细节适中，不使用彩铅、排线或写实质感。
+- 浅米白纸底加一种主题色。
+- 图形边缘有轻微的手工印刷感。
+- 柔光与光晕比较明显，但图形主体仍然清楚。
+- 带有自然纸纹和细颗粒。
+- 底部只有两行小字和一至五个主体图标。
+
+## 安装
+
+下载或克隆这个仓库，把完整的 `ninefold-duotone-grid` 文件夹安装为自定义 Skill。不要只复制 `SKILL.md`，因为版式参考图和其他规则文件也需要一起保留。
+
+本地 Codex 可以使用：
 
 ```bash
 git clone https://github.com/Lixorn/ninefold-duotone-grid.git
@@ -28,56 +48,62 @@ mkdir -p ~/.codex/skills
 cp -R ninefold-duotone-grid/ninefold-duotone-grid ~/.codex/skills/ninefold-duotone-grid
 ```
 
-Keep `SKILL.md`, `agents`, `assets`, and `references` together. Both layout guides in `assets` are required for automatic portrait/landscape routing.
+## 使用方法
 
-## Use
-
-Invoke the skill and provide one ink color.
+使用时只需要提供图片和主题色：
 
 ```text
-Use $ninefold-duotone-grid to stylize this photo in powder blue.
+用 $ninefold-duotone-grid 风格化这张照片，主题色使用浅蓝色。
 ```
+
+指定横版六宫格：
 
 ```text
-Use $ninefold-duotone-grid to stylize this wide photo as a landscape 4:3 six-grid print in forest green.
+用 $ninefold-duotone-grid 把这张横图做成 4:3 六宫格，主题色使用绿色。
 ```
+
+不提供图片，直接写主题：
 
 ```text
-Use $ninefold-duotone-grid to create a brick-red print about roads, beaches, and the sea.
+用 $ninefold-duotone-grid 做一张关于公路、沙滩和大海的砖红色海报。
 ```
+
+在原图中加入新主体：
 
 ```text
-Use $ninefold-duotone-grid with this coast photo and add a yellow convertible; keep cobalt blue as the ink.
+用 $ninefold-duotone-grid 处理这张海岸照片，再加入一辆敞篷车，主题色使用钴蓝色。
 ```
 
-The built-in normalized palette includes cobalt blue, powder blue, vermilion, brick red, forest green, olive green, violet, and charcoal navy. An explicit hex value takes priority.
+一次处理多张图片时，可以分别指定颜色：
 
-## Modes
+```text
+用 $ninefold-duotone-grid 处理这三张照片，分别使用青色、红色和紫色。
+```
 
-| Mode | Input | Result |
+## 三种主要模式
+
+| 模式 | 你需要提供什么 | 结果 |
 | --- | --- | --- |
-| Source Transform | One or more source images | Nine portrait or six landscape reinterpretations derived from a small cue set |
-| Theme Compose | Text only | A new cell system based on concrete theme anchors |
-| Source + Added Subject | Source image plus a described or referenced subject | Source-led grid with a controlled subset reserved for the addition |
-| Prompt-only | Any supported input | Plan, footer copy, cell matrix, and final generation prompt |
-| Analyze-only | Existing work or a request for explanation | Visual-system analysis without generation |
+| 图片模式 | 一张或多张图片 | 从每张图中提取主体并重新设计 |
+| 文字主题模式 | 一段简短主题 | 根据文字直接创作画面 |
+| 图片加主体模式 | 原图和要加入的主体 | 保留原图主题，同时加入新主体 |
 
-## Visual contract
+如果只想查看生成提示，可以要求“只给 Prompt”。如果只想分析风格，可以要求“只分析，不生成”。
 
-The portrait layout uses a 1200×1600 normalized canvas. Its 3×3 grid occupies `x=96..1104` and `y=96..1104`; all nine cells are 320×320 with 24-unit gutters and 96-unit top/side margins.
+## 颜色
 
-The landscape layout uses a 1600×1200 normalized canvas. Its 3×2 grid occupies `x=128..1472` and `y=128..1016`; all six cells are 432×432 with 24-unit gutters and 128-unit top/side margins. The fixed paper color in both layouts is `#F7F1E3`; the second designed color is selected by the user.
+主题色可以直接写颜色名称，例如浅蓝色、砖红色、森林绿或紫色，也可以提供十六进制色值。默认纸底固定为较浅的米白色 `#F7F1E3`。
 
-Square geometry is intentionally reinforced through written constraints and the matching `assets/layout-guide.png` or `assets/layout-guide-4x3.png`. Explicit ratio requests win; otherwise wide source images automatically use landscape 4:3, while portrait/square images and text-only themes use portrait 3:4. Image generation remains probabilistic, so the skill includes a quality gate and one targeted regeneration pass for visible failures.
+Skill 默认使用米白色加一种主题色。如果你明确要求多色，也可以根据画面主体使用少量受控颜色，例如为不同食物分别保留对应颜色。
 
-## Repository structure
+## 文件结构
 
 ```text
 .
 ├── README.md
+├── README_EN.md
 ├── LICENSE
 ├── examples/
-│   └── city-crossing.png
 └── ninefold-duotone-grid/
     ├── SKILL.md
     ├── agents/
@@ -85,12 +111,6 @@ Square geometry is intentionally reinforced through written constraints and the 
     └── references/
 ```
 
-## 中文说明
+## 许可
 
-`ninefold-duotone-grid` 会把照片或文字主题重新诠释为双色编辑海报。它支持 3:4 竖版九宫格和 4:3 横版六宫格，两种版式都使用严格方形的格子、相等的顶部与左右留白，并在下方保留两行极小英文打字机文字和与主体对应的极简图标。默认使用浅米白纸底，另一种墨色由使用者指定。
-
-本仓库将可安装的 skill 单独放在 `ninefold-duotone-grid` 目录中，仓库根目录只承担配布说明与示例展示。结构母版只作为生图参考，不会对成品进行程序化裁切，也不会直接进入最终画面。
-
-## License
-
-MIT. See [LICENSE](LICENSE).
+使用 [MIT License](LICENSE)。

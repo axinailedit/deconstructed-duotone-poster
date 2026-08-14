@@ -33,7 +33,9 @@ Keep five to seven cells source-led. Use two to four cells for the added subject
 
 ## Six-cell landscape balance
 
-For a landscape `4:3` six-grid, choose six materially different roles from the same bank. Use three to four abstract, material, motion, erosion, or negative-space studies; two to three semi-literal cue studies; at least one cropped signature; and no more than one simplified scene fragment. Preserve only two or three signature cues across the full six-cell family.
+For a landscape `4:3` six-grid, reuse the portrait abstraction logic at higher concentration. Choose six materially different roles from the same bank. Use four to five abstract, material, motion, erosion, scale, inversion, or negative-space studies; only one to two semi-literal cue studies; at least one cropped signature; and no more than one simplified scene fragment. Preserve only two or three signature cues across the full six-cell family.
+
+Give every landscape cell one dominant filled mass or cream void and at most one secondary rhythm family. Aim for two to seven large countable forms, not many small descriptive marks. Convert any would-be drawing into one of these operations: merge adjacent parts into one silhouette; remove interior contours; enlarge and crop one cue; replace texture with a single broken field; replace repeated components with three to seven unequal blocks or dots. Do not use hatching, pencil strokes, engraving, fur lines, feather lines, leaf veins, tiny surface marks, or tonal modeling.
 
 In Source + Added Subject mode, keep three to five cells source-led and use one to three cells for the addition. Include at least one reduced relationship with a source anchor when two or more addition cells are used. Never let the addition occupy more than half of the grid.
 
@@ -42,6 +44,8 @@ In Source + Added Subject mode, keep three to five cells source-led and use one 
 A cell is too simple when it becomes a generic curve, dot pattern, rectangle, sunburst, or logo and the full cell family no longer recovers the theme. Restore one grounded material behavior, crop, or contextual rhythm; do not automatically restore a complete object.
 
 A cell is too literal when it renders a complete identifiable assembly, reconstructs a whole photographed scene, uses layered foreground/midground/background staging, repeats architectural openings precisely, or requires tiny linework. Replace components with a broad field, void, crop, or broken rhythm.
+
+A landscape cell fails immediately when it resembles a sketch, colored-pencil study, engraving, or traced photograph. Reduce it until its identity is carried by silhouette, proportion, crop, contact, or one negative-space cut. Print wear may interrupt the fill but may not describe anatomy or surface detail.
 
 ## Edge gate
 

@@ -34,12 +34,13 @@ Inspect the actual output at full view and thumbnail scale. Check structure befo
 ## Landscape hard gates
 
 1. Canvas is landscape `4:3`, mapped to exactly `1600 x 1200` normalized units.
-2. Outer grid occupies `x=128..1472`, `y=128..1016`. Top, left, and right ivory margins each measure exactly `128` units.
-3. Verify six exact `432 x 432` cells at columns `x=128..560`, `584..1016`, `1040..1472` and rows `y=128..560`, `584..1016`, with exactly `24` units of gutter. Every cell width equals height within one output pixel. Reject tall or wide panels, unequal rows or columns, merged cells, missing cells, or extra panels.
-4. Verify the six cells read as copies of one shared square tile in a `3 x 2` array. The `1344 x 888` outer scaffold may be rectangular; the individual cells may not.
+2. Outer grid occupies `x=188..1412`, `y=188..996`. Top, left, and right ivory margins each measure exactly `188` units. Reject the earlier oversized `128`-margin placement or any grid wider than `1224` units.
+3. Verify six exact `392 x 392` cells at columns `x=188..580`, `604..996`, `1020..1412` and rows `y=188..580`, `604..996`, with exactly `24` units of gutter. Every cell width equals height within one output pixel. Reject tall or wide panels, unequal rows or columns, merged cells, missing cells, or extra panels.
+4. Verify the six cells read as copies of one shared square tile in a `3 x 2` array. The `1224 x 808` outer scaffold may be rectangular; the individual cells may not.
 5. Compare directly with `assets/layout-guide-4x3.png`. Placement, margins, gutter rhythm, and all six square envelopes must coincide without retaining neutral gray or placeholder marks.
-6. Footer remains below `y=1016`; copy and icons stay roughly within `y=1060..1130`, with blank ivory separation. Text is exactly two small left-aligned lines; icons obey the subject inventory and one-to-five rule.
-7. Apply portrait hard gates 9–20 unchanged, replacing nine-cell counts with the six-cell balance: three to four abstract/material-led studies, two to three semi-literal cue studies, at least one cropped signature, no more than one simplified scene, and only two or three signature cues across the full grid.
+6. Footer remains below `y=996`; copy and icons stay roughly within `y=1054..1110`, with a clear blank band above and at least `90` units of ivory below. Text is exactly two tiny left-aligned lines with capital height `1.05–1.25%` of canvas height. Icons are only `30–42` units high, obey the subject inventory and one-to-five rule, and end no farther right than `x=1412`.
+7. Apply portrait hard gates 9–20 unchanged, replacing nine-cell counts with the six-cell balance: four to five abstract/material-led studies, only one to two semi-literal cue studies, at least one cropped signature, no more than one simplified scene, and only two or three signature cues across the full grid.
+8. Every cell passes the silhouette-first test: one dominant filled mass or cream void, roughly two to seven large countable forms, and at most one supporting rhythm family. Reject any cell that reads as colored pencil, sketch, engraving, line art, hatching, stippled shading, repeated fur/feather strokes, leaf veins, small construction lines, or detailed food surface. Paper grain may interrupt flat fills microscopically but may not describe form.
 
 Any hard-gate failure requires one regeneration. Put the failed rule in the first two prompt sentences and revise the weakest cells. Do not present a second failed result as fully successful.
 
