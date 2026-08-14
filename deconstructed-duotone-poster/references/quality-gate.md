@@ -4,8 +4,8 @@ Inspect the actual output at full view and thumbnail scale. Check structure befo
 
 ## Layout selection
 
-- Use the portrait gates for a `3:4` nine-cell result and compare against `assets/layout-guide.png`.
-- Use the landscape gates for a `4:3` six-cell result and compare against `assets/layout-guide-4x3.png`.
+- Use the portrait gates for a `3:4` nine-cell result and compare against `assets/layout-guide.png`; use the portrait four-panel gates for `assets/layout-guide-vertical-4.png`.
+- Use the landscape gates for a `4:3` six-cell result and compare against `assets/layout-guide-4x3.png`; use the landscape four-panel gates for `assets/layout-guide-horizontal-4.png`.
 - An explicit ratio or cell count always wins. Without one, route a source image at width/height `>=1.15` to landscape; otherwise use portrait. Theme Compose remains portrait by default.
 
 ## Portrait hard gates
@@ -42,6 +42,13 @@ Inspect the actual output at full view and thumbnail scale. Check structure befo
 7. Apply portrait hard gates 9–20 unchanged, replacing nine-cell counts with the six-cell balance: four to five abstract/material-led studies, only one to two semi-literal cue studies, at least one cropped signature, no more than one simplified scene, and only two or three signature cues across the full grid.
 8. Every cell passes the silhouette-first test: one dominant filled mass or cream void, roughly two to seven large countable forms, and at most one supporting rhythm family. Reject any cell that reads as colored pencil, sketch, engraving, line art, hatching, stippled shading, repeated fur/feather strokes, leaf veins, small construction lines, or detailed food surface. Paper grain may interrupt flat fills microscopically but may not describe form.
 
+## Four-panel hard gates
+
+1. A portrait four-panel result uses `3:4` and the fixed `1200 x 1600` coordinates: four exact `492 x 492` squares at columns `x=96..588`, `612..1104` and rows `y=96..588`, `612..1104`, with `24`-unit gutters and equal `96`-unit top/left/right margins. Compare against `assets/layout-guide-vertical-4.png`.
+2. A landscape four-panel result uses `4:3` and the fixed `1600 x 1200` coordinates: four exact `288 x 288` squares at `x=188..476`, `500..788`, `812..1100`, `1124..1412`, all at `y=188..476`, with `24`-unit gutters and equal `188`-unit top/left/right margins. Compare against `assets/layout-guide-horizontal-4.png`.
+3. In either branch, the panels read as one shared square tile copied four times. Every panel width equals height within one output pixel; reject any tall, wide, merged, missing, stretched, or independently improvised panel.
+4. Use at least three abstract/material-led studies and at most one semi-literal cue, with one cropped signature and no more than one simplified scene fragment. Apply the shared footer, palette, edge, paper, glow, grain, and icon gates below.
+
 Any hard-gate failure requires one regeneration. Put the failed rule in the first two prompt sentences and revise the weakest cells. Do not present a second failed result as fully successful.
 
 ## Abstraction balance audit
@@ -75,4 +82,5 @@ Any hard-gate failure requires one regeneration. Put the failed rule in the firs
 
 ## Prompt-only audit
 
-Verify that the prompt states the request mode, semantic anchors, selected layout, its complete fixed coordinate contract and cell bounds, the shared-square-tile construction metaphor, equal top/left/right margins, one-pixel geometry tolerance, exactly six or nine equal square cells, the matching layout guide, a faint inward-only printed fringe, generous negative space, quiet lower footer, exact two-line footer copy and line break, smaller type scale, explicit subject inventory and icon count, icon identities and reductions, layout-appropriate abstraction ratio, stable flat cores, restrained `0.15–0.35%` ink transition, separate strong halo, pale ivory `#F7F1E3`, selected ink value, continuous subtle paper texture, separate grain, and the negative block.
+Verify that the prompt states the request mode, semantic anchors, selected layout, its complete fixed coordinate contract and cell bounds, the shared-square-tile construction metaphor, equal top/left/right margins, one-pixel geometry tolerance, exactly four, six, or nine equal square cells, the matching layout guide, a faint inward-only printed fringe, generous negative space, quiet lower footer, exact two-line footer copy and line break, smaller type scale, explicit subject inventory and icon count, icon identities and reductions, layout-appropriate abstraction ratio, stable flat cores, restrained `0.15–0.35%` ink transition, separate strong halo, pale ivory `#F7F1E3`, selected ink value, continuous subtle paper texture, separate grain, and the negative block.
+

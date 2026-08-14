@@ -9,7 +9,9 @@ This is an image-styling skill for ChatGPT and Codex. It finds the main subjects
 ## What it can do
 
 - Turn a photo into a portrait 3:4 nine-square poster.
+- Turn a portrait photo into a portrait 3:4 four-panel poster.
 - Turn a wide photo into a landscape 4:3 six-square poster.
+- Turn a wide photo into a landscape 4:3 four-panel poster.
 - Create a poster from a text theme without a source image.
 - Add a requested subject to a source image.
 - Keep a fixed pale ivory paper color and use one ink color chosen by the user.
@@ -22,9 +24,11 @@ The cells do not repeat the same picture. The skill selects useful shapes, movem
 | Layout | Canvas | Grid | Best for |
 | --- | --- | --- | --- |
 | Nine-square | Portrait 3:4 | 3×3 squares | Portrait photos, square photos, and text themes |
+| Vertical four-panel | Portrait 3:4 | 1×4 squares | Clear subjects and quieter posters |
 | Six-square | Landscape 4:3 | 3×2 squares | Wide photos and landscape scenes |
+| Horizontal four-panel | Landscape 4:3 | 4×1 squares | Clear subjects and quieter posters |
 
-Both layouts keep generous empty space. The top, left, and right paper margins are equal, and every cell is a true square. The landscape layout uses a smaller grid and wider outer margins.
+All four layouts keep generous empty space. The top, left, and right paper margins are equal, and every cell is a true square. Four-panel layouts are quieter and use fewer, stronger interpretations.
 
 ## Visual style
 
@@ -60,6 +64,10 @@ Ask for the landscape layout:
 
 ```text
 Use $deconstructed-duotone-poster to turn this wide photo into a landscape 4:3 six-square poster in forest green.
+
+Use $deconstructed-duotone-poster to turn this wide photo into a landscape 4:3 horizontal four-panel poster in sea blue.
+
+Use $deconstructed-duotone-poster to turn this portrait photo into a portrait 3:4 vertical four-panel poster in brick red.
 ```
 
 Create directly from a theme:

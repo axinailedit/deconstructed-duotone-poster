@@ -12,7 +12,7 @@ Separately count primary semantic subjects for footer icons. Count concrete subj
 
 Use this mode when no image is supplied. Parse the text into two to five concrete anchors and one relation or mood. For “road, beach, and sea,” useful anchors are curve, lane rhythm, sand field, horizon, foam, and travel. Keep recognition collective: use a few noun-specific cues and let most cells interpret motion, material, contour, reflection, or negative space. Do not invent a complete realistic beach scene.
 
-Plan all cells from the stated theme: nine in portrait or six in landscape. Do not claim to have inspected a source. Use ordinary world knowledge only to make the requested nouns imageable. Generate with only the selected structural layout guide attached.
+Plan all cells from the stated theme: nine or four in portrait, or six or four in landscape. Do not claim to have inspected a source. Use ordinary world knowledge only to make the requested nouns imageable. Generate with only the selected structural layout guide attached.
 
 ## Source + Added Subject
 
@@ -47,3 +47,4 @@ Choose footer icon identities before compiling the prompt.
 - In Source + Added Subject mode, include an icon for the added subject when it is semantically primary; keep the total at five or fewer.
 - In Theme Compose mode, use the concrete theme nouns as subjects. Abstract words such as mood, motion, silence, travel, heat, or memory do not receive icons unless the request explicitly personifies them.
 - Give each icon one unmistakable subject cue while reducing it to one main filled silhouette, at most one negative-space cut, and at most one supporting mark. Do not use arbitrary dots, squares, rules, rings, arcs, or brackets as decoration unless they are necessary parts of the subject icon.
+

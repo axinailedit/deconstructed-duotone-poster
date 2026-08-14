@@ -34,6 +34,20 @@
 - Treat each cell as one broad filled mass, negative-space gesture, crop, material field, or mark rhythm plus at most one to three supporting mark families. Aim for roughly three to nine large forms; count a dot, dash, ripple, post, or fragment rhythm as one family.
 - In portrait, include four to six abstract, material, motion, or negative-space studies and two to four semi-literal cue studies. In landscape, include four to five abstract/material-led studies and only one to two semi-literal cue studies. In either layout, include no more than one simplified scene fragment; crop or reduce structural cues rather than rendering detailed objects.
 - For landscape, impose a stricter graphic budget matching the portrait references: each cell contains one dominant silhouette or negative-space system, roughly two to seven large countable forms, and at most one supporting rhythm family. At thumbnail size, forms must read as solid blocks rather than drawing. If a form requires internal strokes to be recognizable, enlarge, crop, or reduce it again.
+
+## Portrait 3:4 vertical four-panel layout
+
+- Use this branch for an explicit portrait `3:4` vertical four-panel request. It is a quieter 2-by-2 square block on the same portrait canvas, not four stretched cards.
+- Use the fixed `1200 x 1600` canvas and the same `M=96` outer paper margin. Place four exact `492 x 492` cells at `x=96..588` and `612..1104`, with rows `y=96..588` and `612..1104`; the gutter is exactly `24` units.
+- Treat the block as one shared square tile copied four times. Keep top, left, and right paper margins exactly equal at `96` units. After proportional scaling, every cell width must equal its height within one output pixel.
+- Use `assets/layout-guide-vertical-4.png` as geometry-only reference. Keep the footer quiet and subordinate, with the same two-line typewriter copy and one-to-five subject-icon rule.
+
+## Landscape 4:3 horizontal four-panel layout
+
+- Use this branch for an explicit landscape `4:3` horizontal four-panel request. Place four exact squares in one row.
+- Use the fixed `1600 x 1200` canvas with `M=188`. Place `288 x 288` cells at `x=188..476`, `500..788`, `812..1100`, and `1124..1412`, all at `y=188..476`; gutters are exactly `24` units.
+- Treat the row as one shared square tile copied four times. Keep top, left, and right paper margins exactly equal at `188` units. After proportional scaling, every cell width must equal its height within one output pixel.
+- Use `assets/layout-guide-horizontal-4.png` as geometry-only reference. Leave the lower paper field open for the same small two-line footer and subject-derived icons.
 - Preserve only two to four signature details across the entire grid: for example, a road bend, lane-dash rhythm, lamp disk, railing cadence, wheel arc, profile edge, foam cuts, or leaf cluster. Do not place several signature parts in every cell.
 - Translate structures rather than illustrate them: railing -> a few unequal blocks and voids; brick paving -> two or three broken plane cuts; camera crossbar -> one bar, joint, and hanging drop; road -> one broad curve and sparse dash rhythm; cloud -> one torn field; sea -> broken reflection bands.
 - Prefer irregular fields, pooled shapes, broad arcs, radial cuts, torn edges, floating islands, dotted trails, broken stripes, negative-space channels, and quiet density shifts. Avoid coherent line-art, precise architectural openings, detailed hardware, and literal perspective scenes.
@@ -72,3 +86,4 @@ Reject smooth digital surfaces, uniform noise, canvas weave, cloth fibers, deep 
 ## Anti-style
 
 Reject photography, literal source collage, traced reconstruction, deep perspective, architectural drafting, photorealistic volume, watercolor, oil paint, airbrush shading, glossy gradients, 3D bevels, drop shadows, comic outlines, UI cards, dense poster typography, ornamental frames, cheap sharp-vector iconography, and interchangeable generic symbols.
+

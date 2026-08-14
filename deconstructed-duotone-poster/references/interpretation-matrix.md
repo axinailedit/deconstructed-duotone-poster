@@ -1,6 +1,6 @@
 # Interpretation matrix
 
-Plan the selected cells in reading order: nine for portrait `3:4`, six for landscape `4:3`. Write each as `(anchor) + (flat role) + (one retained cue or material behavior) + (soft-edge treatment) + (density)`. Keep the plan short enough that it describes a graphic field rather than an illustrated object.
+Plan the selected cells in reading order: nine or four for portrait `3:4`, six or four for landscape `4:3`. Write each as `(anchor) + (flat role) + (one retained cue or material behavior) + (soft-edge treatment) + (density)`. Keep the plan short enough that it describes a graphic field rather than an illustrated object.
 
 ## Balanced role bank
 
@@ -39,6 +39,10 @@ Give every landscape cell one dominant filled mass or cream void and at most one
 
 In Source + Added Subject mode, keep three to five cells source-led and use one to three cells for the addition. Include at least one reduced relationship with a source anchor when two or more addition cells are used. Never let the addition occupy more than half of the grid.
 
+## Four-panel balance
+
+For either four-panel layout, choose four materially different roles from the same bank. Use at least three abstract, material, motion, erosion, scale, inversion, or negative-space studies and at most one semi-literal cue study. Preserve only one or two signature cues across the complete set, with no more than one simplified scene fragment. In Source + Added Subject mode, reserve one or two panels for the addition and keep the other panels source-led.
+
 ## Balance gate
 
 A cell is too simple when it becomes a generic curve, dot pattern, rectangle, sunburst, or logo and the full cell family no longer recovers the theme. Restore one grounded material behavior, crop, or contextual rhythm; do not automatically restore a complete object.
@@ -58,3 +62,4 @@ Two adjacent cells fail when they share the same anchor, role, crop, density, an
 ## Grounding gate
 
 Every mark must answer which source cue, theme word, or requested added subject generated it. Avoid generic moons, stars, flowers, eyes, arrows, and sunbursts unless directly grounded. Footer icons must also be semantic: derive each one from one counted primary subject, and never add non-semantic filler marks.
+
