@@ -1,11 +1,12 @@
 interface:
   display_name: Deconstructed Duotone Poster
-  short_description: 将图片重构为高留白、平面化的九格竖版或六格横版双色海报
+  short_description: 将图片重构为高留白、平面化的双色解构海报
   default_prompt: Use $deconstructed-duotone-poster to create a spacious duotone print, choosing
-    the portrait 3:4 nine-square or landscape 4:3 six-square layout from the request
-    and source aspect ratio, with compact exact-square grids, enlarged equal top and
-    side margins, strongly reduced flat masses, pale ivory paper, inward hand-printed
-    edges, separate strong glow, and subject-derived footer icons.
+    a portrait 3:4 nine-square or four-panel layout, or a landscape 4:3 six-square or
+    four-panel layout, from the request and source aspect ratio, with compact exact-
+    square panels, enlarged equal paper margins, strongly reduced flat masses, pale
+    ivory paper, inward hand-printed edges, separate strong glow, and subject-derived
+    footer icons.
   icon_small: assets/icon.svg
   icon_large: assets/icon.svg
 policy:
