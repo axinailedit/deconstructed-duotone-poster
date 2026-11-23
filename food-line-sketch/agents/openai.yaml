@@ -1,0 +1,16 @@
+interface:
+  display_name: Food Line Sketch
+  short_description: 把美食照片变成单色手绘线稿插画，线条色与背景色可选
+  default_prompt: Use $food-line-sketch to redraw this food photo as a naive top-down
+    single-pen line illustration with wobbly continuous outlines, sparse decorative
+    dots and one tiny hatched accent, scattered with generous empty paper, in ballpoint
+    blue on warm cream unless I name other line and background colors.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

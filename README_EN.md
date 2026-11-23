@@ -117,6 +117,34 @@ You can use a simple color name such as powder blue, brick red, forest green, or
 
 The normal style uses pale ivory plus one ink color. If you clearly ask for multiple colors, the skill can use a small controlled palette based on the subjects, such as keeping different food colors in a food poster.
 
+## Companion skill: Food Line Sketch
+
+`food-line-sketch/` is a second skill in this repository. It turns a food or table photo into a naive, top-down, single-pen line drawing: wobbly continuous outlines, sparse dots and specks, one tiny hatched accent, and lots of empty paper, like a ballpoint doodle of your meal.
+
+<p align="center">
+  <img src="food-line-sketch/assets/style-specimen.png" alt="Pen-line style specimen" width="60%">
+</p>
+
+- Line color and background color are both optional. Defaults: ballpoint blue `#2F62B3` on warm cream `#ECE5D1`. Use a color name or a hex value for either one.
+- Works from a photo, or from a plain list of dishes when there is no photo.
+- `scripts/recolor.py` locks any finished drawing to exact colors, or re-colors it later without regenerating:
+
+```bash
+python food-line-sketch/scripts/recolor.py sketch.png sketch-red.png --line red --bg "pale pink"
+```
+
+Install it the same way as the poster skill:
+
+```bash
+cp -R deconstructed-duotone-poster/food-line-sketch ~/.codex/skills/food-line-sketch
+```
+
+```text
+Use $food-line-sketch on this brunch photo.
+Use $food-line-sketch on this ramen photo, forest green line on ivory paper.
+Use $food-line-sketch for toast, a soft-boiled egg, coffee and an orange.
+```
+
 ## Files
 
 ```text
@@ -125,11 +153,17 @@ The normal style uses pale ivory plus one ink color. If you clearly ask for mult
 ├── README_EN.md
 ├── LICENSE
 ├── examples/
-└── deconstructed-duotone-poster/
+├── deconstructed-duotone-poster/
+│   ├── SKILL.md
+│   ├── agents/
+│   ├── assets/
+│   └── references/
+└── food-line-sketch/
     ├── SKILL.md
     ├── agents/
     ├── assets/
-    └── references/
+    ├── references/
+    └── scripts/
 ```
 
 ## License

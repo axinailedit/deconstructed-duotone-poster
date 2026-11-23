@@ -117,6 +117,34 @@ cp -R deconstructed-duotone-poster/deconstructed-duotone-poster ~/.codex/skills/
 
 Skill 默认使用米白色加一种主题色。如果你明确要求多色，也可以根据画面主体使用少量受控颜色，例如为不同食物分别保留对应颜色。
 
+## 姊妹 Skill：美食手绘线稿
+
+`food-line-sketch/` 是本仓库的第二个 Skill。它把美食或餐桌照片重新画成俯视角度的单色手绘线稿：略带抖动的连续线条、少量圆点和小点装饰、一处极小的排线填充，以及大量留白，像用圆珠笔随手画下的一餐。
+
+<p align="center">
+  <img src="food-line-sketch/assets/style-specimen.png" alt="线条风格样本" width="60%">
+</p>
+
+- 线条颜色和背景颜色都可以自选，不指定时默认为圆珠笔蓝 `#2F62B3` 配暖米色 `#ECE5D1`。两者都可以写颜色名称或十六进制色值。
+- 可以用照片生成，也可以在没有照片时直接写菜名。
+- `scripts/recolor.py` 可以把画好的线稿锁定为精确色值，或之后直接换色而不必重新生成：
+
+```bash
+python food-line-sketch/scripts/recolor.py sketch.png sketch-red.png --line red --bg "pale pink"
+```
+
+安装方式与海报 Skill 相同：
+
+```bash
+cp -R deconstructed-duotone-poster/food-line-sketch ~/.codex/skills/food-line-sketch
+```
+
+```text
+用 $food-line-sketch 把这张早午餐照片画成手绘线稿。
+用 $food-line-sketch 画这碗拉面，线条用墨绿色，背景用象牙白。
+用 $food-line-sketch 画吐司、溏心蛋、咖啡和一个橙子，不提供照片。
+```
+
 ## 文件结构
 
 ```text
@@ -125,11 +153,17 @@ Skill 默认使用米白色加一种主题色。如果你明确要求多色，�
 ├── README_EN.md
 ├── LICENSE
 ├── examples/
-└── deconstructed-duotone-poster/
+├── deconstructed-duotone-poster/
+│   ├── SKILL.md
+│   ├── agents/
+│   ├── assets/
+│   └── references/
+└── food-line-sketch/
     ├── SKILL.md
     ├── agents/
     ├── assets/
-    └── references/
+    ├── references/
+    └── scripts/
 ```
 
 ## 许可
